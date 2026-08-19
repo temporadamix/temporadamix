@@ -44,8 +44,8 @@ function openWhatsAppChooser(message, productName=''){
   waProductText.textContent = productName
     ? `Selecciona el número al que deseas escribir. El mensaje ya llevará el producto “${productName}” y sus precios.`
     : 'Selecciona uno de nuestros números y se abrirá WhatsApp con el mensaje listo para enviar.';
-  waNumber1.href = buildWhatsAppUrl(WA_NUMBERS[0].phone, message);
-  waNumber2.href = buildWhatsAppUrl(WA_NUMBERS[1].phone, message);
+  waNumber1.href = buildWhatsAppUrl(WA_NUMBERS[0].label, message);
+  waNumber2.href = buildWhatsAppUrl(WA_NUMBERS[1].label, message);
   waModal.hidden = false;
   waModal.setAttribute('aria-hidden','false');
   document.body.classList.add('modal-open');
@@ -63,7 +63,7 @@ document.addEventListener('keydown', e => { if(e.key === 'Escape' && !waModal.hi
 
 document.querySelectorAll('.generic-wa').forEach(link => link.addEventListener('click', e => {
   e.preventDefault();
-  openWhatsAppChooser(link.dataset.message || 'Hola Importaciones Javimix, quiero información sobre sus productos.');
+  openWhatsAppChooser(link.dataset.message || 'Hola TemporadaMix, quiero información sobre sus productos.');
 }));
 
 function waLink(p){
