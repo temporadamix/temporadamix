@@ -8,9 +8,9 @@ const PRODUCTS = [
   {name:'Faroles',file:'faroles.jpeg',cat:'iluminacion',tag:'Iluminación',retailPrice:null},
   {name:'Farol Grande',file:'farol-grande.png',cat:'iluminacion',tag:'Iluminación',retailPrice:80000},
   {name:'Farol Pequeño',file:'farol-pequeno.png',cat:'iluminacion',tag:'Iluminación',retailPrice:10000},
-  {name:'Entrada Dorada',file:'entrada-dorada.jpeg',cat:'decoracion',tag:'Decoración',retailPrice:35000},
-  {name:'Entrada Navidad',file:'entrada-navidad.jpeg',cat:'decoracion',tag:'Decoración',retailPrice:35000},
-  {name:'Entrada Rosado',file:'entrada-rosado.jpeg',cat:'decoracion',tag:'Decoración',retailPrice:35000},
+  {name:'Entrada Dorada',file:'entrada-dorada.jpeg',cat:'decoracion',tag:'Decoración',retailPrice:35000,wholesalePrice:30000},
+  {name:'Entrada Navidad',file:'entrada-navidad.jpeg',cat:'decoracion',tag:'Decoración',retailPrice:35000,wholesalePrice:30000},
+  {name:'Entrada Rosado',file:'entrada-rosado.jpeg',cat:'decoracion',tag:'Decoración',retailPrice:35000,wholesalePrice:30000},
   {name:'Entrada Rojo',file:'entrada-rojo.jpeg',cat:'decoracion',tag:'Decoración',retailPrice:35000},
   {name:'Flores',file:'flores.png',cat:'decoracion',tag:'Decoración',retailPrice:5000},
   {name:'Flor Dorada',file:'flor-dorada.jpeg',cat:'decoracion',tag:'Decoración',retailPrice:5000},
@@ -21,8 +21,8 @@ const PRODUCTS = [
   {name:'Muñeco de Nieve Barrigón',file:'muneco-nieve-barrigon.png',cat:'figuras',tag:'Figuras',retailPrice:200000,wholesalePrice:180000},
   {name:'Papá Noel Barrigón',file:'papa-noel-barrigon.png',cat:'figuras',tag:'Figuras',retailPrice:200000,wholesalePrice:180000},
 
-  {name:'Muñeco de Nieve de Entrada',file:'muneco-nieve-entrada.jpeg',cat:'figuras',tag:'Figuras',retailPrice:70000},
-  {name:'Muñeco Reno de Entrada',file:'muneco-reno-entrada.jpeg',cat:'figuras',tag:'Figuras',retailPrice:70000},
+  {name:'Muñeco de Nieve de Entrada',file:'muneco-nieve-entrada.jpeg',cat:'figuras',tag:'Figuras',retailPrice:30000},
+  {name:'Muñeco Reno de Entrada',file:'muneco-reno-entrada.jpeg',cat:'figuras',tag:'Figuras',retailPrice:30000},
   {name:'Muñecos de Entrada',file:'munecos-entrada.png',cat:'figuras',tag:'Figuras',retailPrice:90000},
 
   // Referencias de $30.000: precio especial por mayor de $28.000.
