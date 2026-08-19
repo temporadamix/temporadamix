@@ -1,0 +1,3 @@
+Cloudflare Pages deployment root: this folder.
+Main entry point: index.html
+QR-compatible path: navidad/index.html

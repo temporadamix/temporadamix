@@ -1,4 +1,4 @@
-IMPORTACIONES JAVIMIX — CATÁLOGO WEB NAVIDEÑO 2026
+TEMPORADAMIX — CATÁLOGO WEB NAVIDEÑO 2026
 
 Contenido:
 - index.html: página principal.
