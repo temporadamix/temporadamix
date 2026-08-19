@@ -24,6 +24,9 @@ const PRODUCTS = [
   {name:'Muñeco de Nieve de Entrada',file:'muneco-nieve-entrada.jpeg',cat:'figuras',tag:'Figuras',retailPrice:30000,wholesalePrice:28000},
   {name:'Muñeco Reno de Entrada',file:'muneco-reno-entrada.jpeg',cat:'figuras',tag:'Figuras',retailPrice:30000,wholesalePrice:28000},
   {name:'Muñecos de Entrada',file:'munecos-entrada.png',cat:'figuras',tag:'Figuras',retailPrice:90000},
+  {name:'Muñeco de Nieve con Luz',file:'muñeco-entrada-luz.png',cat:'figuras',tag:'Figuras',retailPrice:40000,wholesalePrice:35000},
+  {name:'Coleccion para la Entrada',file:'coleccion-entrada-luz.png',cat:'figuras',tag:'Figuras',retailPrice:100000,wholesalePrice:100000},
+  {name:'Mariposa Estática',file:'mariposa-estatica.png',cat:'figuras',tag:'Figuras',retailPrice:150000},
 
   // Referencias de $30.000: precio especial por mayor de $28.000.
   {name:'Papá Noel de Entrada',file:'papa-noel-entrada.jpeg',cat:'figuras',tag:'Figuras',retailPrice:30000,wholesalePrice:28000},
