@@ -28,8 +28,8 @@ const PRODUCTS = [
   // Referencias de $30.000: precio especial por mayor de $28.000.
   {name:'Papá Noel de Entrada',file:'papa-noel-entrada.jpeg',cat:'figuras',tag:'Figuras',retailPrice:30000,wholesalePrice:28000},
 
-  {name:'Piernas Largas Galleta',file:'piernas-largas-galleta.png',cat:'figuras',tag:'Figuras',retailPrice:60000},
-  {name:'Piernas Largas Rosadas',file:'piernas-largas-rosadas.jpeg',cat:'figuras',tag:'Figuras',retailPrice:70000},
+  {name:'Piernas Largas Galleta c/u',file:'piernas-largas-galleta.png',cat:'figuras',tag:'Figuras',retailPrice:60000},
+  {name:'Piernas Largas Rosadas c/u',file:'piernas-largas-rosadas.jpeg',cat:'figuras',tag:'Figuras',retailPrice:70000},
   {name:'Piernas Largas',file:'piernas-largas.png',cat:'figuras',tag:'Figuras',retailPrice:70000},
   {name:'Forros para Cojín',file:'forros-cojin.png',cat:'textil',tag:'Textil',retailPrice:8000},
   {name:'Forros para Cojínes',file:'cojin1.jpeg',cat:'textil',tag:'Textil',retailPrice:8000},
