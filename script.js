@@ -23,14 +23,14 @@ function productMessage(p){
   const retail = p.retailPrice;
   const wholesale = getWholesalePrice(p);
   if (retail == null) {
-    return `Hola Importaciones Javimix, estoy interesado en el producto: ${p.name}. ¿Me pueden informar disponibilidad y precio?`;
+    return `Hola TemporadaMix, estoy interesado en el producto: ${p.name}. ¿Me pueden informar disponibilidad y precio?`;
   }
-  return `Hola Importaciones Javimix, quiero comprar ${p.name}. Precio al detal: ${money(retail)}. Precio por mayor: ${money(wholesale)}. ¿Me confirman disponibilidad y condiciones de compra?`;
+  return `Hola TemporadaMix, quiero comprar ${p.name}. Precio al detal: ${money(retail)}. Precio por mayor: ${money(wholesale)}. ¿Me confirman disponibilidad y condiciones de compra?`;
 }
 
 const WA_NUMBERS = [
-  {label:'310 881 7014', phone:'573108817014'},
-  {label:'311 259 5043', phone:'573112595043'}
+  {label:'Asesor 1', phone:'573108817014'},
+  {label:'Asesor 2', phone:'573112595043'}
 ];
 
 const waModal = document.getElementById('whatsappModal');
