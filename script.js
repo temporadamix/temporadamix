@@ -29,8 +29,8 @@ function productMessage(p){
 }
 
 const WA_NUMBERS = [
-  {label:'310 881 7014', phone:'573108817014'},
-  {label:'311 259 5043', phone:'573112595043'}
+  {label:'Asesor 1', phone:'573108817014'},
+  {label:'Asesor 2', phone:'573112595043'}
 ];
 
 const waModal = document.getElementById('whatsappModal');
