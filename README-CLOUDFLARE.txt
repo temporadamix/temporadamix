@@ -52,3 +52,29 @@ Los precios actuales están en products.js. La lógica permite definir wholesale
 NOTA
 ----
 No se han inventado precios adicionales. Las referencias que no tienen retailPrice aparecen como "Consultar".
+
+
+NUEVA CONFIGURACIÓN DE PRECIOS Y STOCK
+---------------------------------------
+1. Precios por mayor:
+   En products.js existe:
+       const CATALOG_CONFIG = { showWholesale: false };
+   Déjalo en false para ocultar los precios por mayor.
+   Cámbialo a true para mostrarlos.
+
+   También puedes activarlos temporalmente sin editar archivos:
+       https://tusitio.com/?mayor=1
+   Para forzarlos ocultos:
+       https://tusitio.com/?mayor=0
+
+2. Marcar un producto como AGOTADO:
+   En la línea del producto agrega:
+       outOfStock:true
+   Ejemplo:
+       {name:'Farol Grande', file:'farol-grande.webp', cat:'iluminacion', tag:'Iluminación', retailPrice:80000, outOfStock:true}
+
+   El producto seguirá visible en el catálogo, pero su imagen se atenuará y aparecerá una franja roja "AGOTADO".
+   El botón de compra se desactiva para evitar pedidos de un producto agotado.
+
+3. Reactivar un producto:
+   Elimina outOfStock:true o cámbialo por outOfStock:false.

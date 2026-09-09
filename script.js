@@ -2,7 +2,23 @@ const grid = document.getElementById('productGrid');
 const search = document.getElementById('search');
 const count = document.getElementById('count');
 const empty = document.getElementById('empty');
+const wholesaleElements = document.querySelectorAll('[data-wholesale-section]');
 let activeFilter = 'todos';
+
+// La configuración se controla desde products.js.
+// Además, ?mayor=1 activa precios por mayor temporalmente.
+// ?mayor=0 los mantiene ocultos aunque CATALOG_CONFIG.showWholesale sea true.
+const urlParams = new URLSearchParams(window.location.search);
+const wholesaleParam = urlParams.get('mayor');
+const SHOW_WHOLESALE = wholesaleParam === '1'
+  ? true
+  : wholesaleParam === '0'
+    ? false
+    : Boolean(CATALOG_CONFIG?.showWholesale);
+
+wholesaleElements.forEach(el => {
+  el.hidden = !SHOW_WHOLESALE;
+});
 
 const money = value => value == null ? 'Consultar' : new Intl.NumberFormat('es-CO',{style:'currency',currency:'COP',maximumFractionDigits:0}).format(value);
 const normalize = s => s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
@@ -22,15 +38,21 @@ function buildWhatsAppUrl(phone, message){
 function productMessage(p){
   const retail = p.retailPrice;
   const wholesale = getWholesalePrice(p);
+  if (p.outOfStock) {
+    return `Hola TemporadaMix, estoy interesado en el producto: ${p.name}. Veo que aparece como agotado. ¿Me pueden informar si habrá reposición?`;
+  }
   if (retail == null) {
     return `Hola TemporadaMix, estoy interesado en el producto: ${p.name}. ¿Me pueden informar disponibilidad y precio?`;
   }
-  return `Hola TemporadaMix, quiero comprar ${p.name}. Precio al detal: ${money(retail)}. Precio por mayor: ${money(wholesale)}. ¿Me confirman disponibilidad y condiciones de compra?`;
+  if (SHOW_WHOLESALE) {
+    return `Hola TemporadaMix, quiero comprar ${p.name}. Precio al detal: ${money(retail)}. Precio por mayor: ${money(wholesale)}. ¿Me confirman disponibilidad y condiciones de compra?`;
+  }
+  return `Hola TemporadaMix, quiero comprar ${p.name}. Precio al detal: ${money(retail)}. ¿Me confirman disponibilidad?`;
 }
 
 const WA_NUMBERS = [
-  {label:'Asesor 1', phone:'573108817014'},
-  {label:'Asesor 2', phone:'573112595043'}
+  {label:'310 881 7014', phone:'573108817014'},
+  {label:'311 259 5043', phone:'573112595043'}
 ];
 
 const waModal = document.getElementById('whatsappModal');
@@ -42,7 +64,7 @@ let currentWaMessage = '';
 function openWhatsAppChooser(message, productName=''){
   currentWaMessage = message;
   waProductText.textContent = productName
-    ? `Selecciona el número al que deseas escribir. El mensaje ya llevará el producto “${productName}” y sus precios.`
+    ? `Selecciona el número al que deseas escribir. El mensaje ya llevará el producto “${productName}”${SHOW_WHOLESALE ? ' y sus precios' : ''}.`
     : 'Selecciona uno de nuestros números y se abrirá WhatsApp con el mensaje listo para enviar.';
   waNumber1.href = buildWhatsAppUrl(WA_NUMBERS[0].phone, message);
   waNumber2.href = buildWhatsAppUrl(WA_NUMBERS[1].phone, message);
@@ -70,19 +92,28 @@ function waLink(p){
   return '#';
 }
 
-
-function card(p){
+function card(p, index){
   const wholesale = getWholesalePrice(p);
-  return `<article class="product-card">
-    <div class="product-image"><img loading="lazy" src="assets/products/${p.file}" alt="${p.name}" onerror="this.style.display='none'"><span class="tag">${p.tag}</span></div>
+  const outOfStock = Boolean(p.outOfStock);
+  return `<article class="product-card${outOfStock ? ' is-out-of-stock' : ''}">
+    <div class="product-image">
+      <img loading="lazy" src="assets/products/${p.file}" alt="${p.name}" onerror="this.style.display='none'">
+      <span class="tag">${p.tag}</span>
+      ${outOfStock ? '<div class="stock-overlay" aria-hidden="true"></div><span class="stock-ribbon">AGOTADO</span>' : ''}
+    </div>
     <div class="product-body">
       <h3>${p.name}</h3>
-      <div class="prices">
+      <div class="prices${SHOW_WHOLESALE ? '' : ' single-price'}">
         <div class="price-box"><small>Al detal</small><strong class="${p.retailPrice==null?'price-unavailable':''}">${money(p.retailPrice)}</strong></div>
-        <div class="price-box wholesale"><small>Por mayor</small><strong class="${wholesale==null?'price-unavailable':''}">${money(wholesale)}</strong></div>
+        ${SHOW_WHOLESALE ? `<div class="price-box wholesale"><small>Por mayor</small><strong class="${wholesale==null?'price-unavailable':''}">${money(wholesale)}</strong></div>` : ''}
       </div>
-      <p class="price-note">${p.retailPrice==null?'Precio pendiente de cargar. Solicítalo por WhatsApp.':'Precio por mayor según referencia. Consulta condiciones de compra.'}</p>
-      <div class="card-actions"><a class="wa product-wa" href="#" data-product="${encodeURIComponent(p.name)}">Comprar por WhatsApp</a><a class="info" href="#contacto">Contacto</a></div>
+      <p class="price-note">${outOfStock ? 'Producto agotado. Consulta por reposición.' : (p.retailPrice==null?'Precio pendiente de cargar. Solicítalo por WhatsApp.':(SHOW_WHOLESALE?'Precio por mayor según referencia. Consulta condiciones de compra.':'Consulta disponibilidad por WhatsApp.'))}</p>
+      <div class="card-actions">
+        ${outOfStock
+          ? '<span class="wa disabled">Agotado</span>'
+          : `<a class="wa product-wa" href="#" data-product-index="${index}">Comprar por WhatsApp</a>`}
+        <a class="info" href="#contacto">Contacto</a>
+      </div>
     </div>
   </article>`;
 }
@@ -90,14 +121,14 @@ function card(p){
 function render(){
   const q = normalize(search.value.trim());
   const filtered = PRODUCTS.filter(p => (activeFilter==='todos' || p.cat===activeFilter) && (!q || normalize(p.name).includes(q) || normalize(p.tag).includes(q)));
-  grid.innerHTML = filtered.map(card).join('');
+  grid.innerHTML = filtered.map(p => card(p, PRODUCTS.indexOf(p))).join('');
   count.textContent = `${filtered.length} productos`;
   empty.hidden = filtered.length > 0;
   grid.querySelectorAll('.product-wa').forEach(link => link.addEventListener('click', e => {
     e.preventDefault();
-    const productName = decodeURIComponent(link.dataset.product || '');
-    const product = PRODUCTS.find(p => p.name === productName);
-    if (!product) return;
+    const productIndex = Number(link.dataset.productIndex);
+    const product = PRODUCTS[productIndex];
+    if (!product || product.outOfStock) return;
     openWhatsAppChooser(productMessage(product), product.name);
   }));
 }
