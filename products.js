@@ -33,8 +33,8 @@ const PRODUCTS = [
   {name:'Muñeco de Nieve Barrigón',file:'muneco-nieve-barrigon.webp',cat:'figuras',tag:'Figuras',retailPrice:200000,wholesalePrice:180000},
   {name:'Papá Noel Barrigón',file:'papa-noel-barrigon.webp',cat:'figuras',tag:'Figuras',retailPrice:200000,wholesalePrice:180000},
 
-  {name:'Muñeco de Nieve de Entrada',file:'muneco-nieve-entrada.webp',cat:'figuras',tag:'Figuras',retailPrice:70000},
-  {name:'Muñeco Reno de Entrada',file:'muneco-reno-entrada.webp',cat:'figuras',tag:'Figuras',retailPrice:70000},
+  {name:'Muñeco de Nieve de Entrada',file:'muneco-nieve-entrada.webp',cat:'figuras',tag:'Figuras',retailPrice:30000},
+  {name:'Muñeco Reno de Entrada',file:'muneco-reno-entrada.webp',cat:'figuras',tag:'Figuras',retailPrice:30000},
   {name:'Muñecos de Entrada',file:'munecos-entrada.webp',cat:'figuras',tag:'Figuras',retailPrice:90000},
 
   // Referencias de $30.000: precio especial por mayor de $28.000.
