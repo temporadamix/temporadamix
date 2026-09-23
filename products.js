@@ -18,7 +18,7 @@ const PRODUCTS = [
   {name:'Farol Grande',file:'farol-grande.webp',cat:'iluminacion',tag:'Iluminación',retailPrice:80000},
   {name:'Farol Pequeño Cuadrado',file:'farol-pequeno.webp',cat:'iluminacion',tag:'Iluminación',retailPrice:10000},
   {name:'Farol Pequeño Redondo',file:'farol-pequenoR.webp',cat:'iluminacion',tag:'Iluminación',retailPrice:10000},
-  {name:'Farol de Agua',file:'farol-agua.webp',cat:'iluminacion',tag:'Iluminación',retailPrice:70000},
+  {name:'Farol de Agua',file:'Farol-agua.webp',cat:'iluminacion',tag:'Iluminación',retailPrice:70000},
   {name:'Entrada Rojo',file:'entrada-rojo.webp',cat:'decoracion',tag:'Decoración',retailPrice:35000,outOfStock:true},
   {name:'Flores',file:'flores.webp',cat:'decoracion',tag:'Decoración',retailPrice:5000},
   {name:'Flor Dorada',file:'flor-dorada.webp',cat:'decoracion',tag:'Decoración',retailPrice:5000},
@@ -43,7 +43,7 @@ const PRODUCTS = [
   {name:'Piernas Largas Rosadas',file:'piernas-largas-rosadas.webp',cat:'figuras',tag:'Figuras',retailPrice:70000,outOfStock:true},
   {name:'Piernas Largas',file:'piernas-largas.webp',cat:'figuras',tag:'Figuras',retailPrice:70000},
   {name:'Canecas Navideñas Redondas',file:'canecas-navidenasR.webp',cat:'decoracion',tag:'Decoración',retailPrice:8000},
-  {name:'Bandejas Navideñas',file:'bandejas.webp',cat:'decoracion',tag:'Decoración',retailPrice:5000},
-  {name:'Platos Navideños',file:'platos.webp',cat:'decoracion',tag:'Decoración',retailPrice:5000},
+  {name:'Bandejas Navideñas',file:'Bandejas.webp',cat:'decoracion',tag:'Decoración',retailPrice:5000},
+  {name:'Platos Navideños',file:'Platos.webp',cat:'decoracion',tag:'Decoración',retailPrice:5000},
   {name:'Tapetes',file:'tapetes.webp',cat:'textil',tag:'Textil',retailPrice:8000}
 ];
