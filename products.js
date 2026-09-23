@@ -16,11 +16,10 @@ const PRODUCTS = [
   {name:'Campana Farol',file:'campana-farol.webp',cat:'iluminacion',tag:'Iluminación',retailPrice:80000},
   {name:'Faroles',file:'faroles.webp',cat:'iluminacion',tag:'Iluminación',retailPrice:null},
   {name:'Farol Grande',file:'farol-grande.webp',cat:'iluminacion',tag:'Iluminación',retailPrice:80000},
-  {name:'Farol Pequeño',file:'farol-pequeno.webp',cat:'iluminacion',tag:'Iluminación',retailPrice:10000},
-  {name:'Entrada Dorada',file:'entrada-dorada.webp',cat:'decoracion',tag:'Decoración',retailPrice:35000,outOfStock:true},
-  {name:'Entrada Navidad',file:'entrada-navidad.webp',cat:'decoracion',tag:'Decoración',retailPrice:35000},
-  {name:'Entrada Rosado',file:'entrada-rosado.webp',cat:'decoracion',tag:'Decoración',retailPrice:35000,outOfStock:true},
-  {name:'Entrada Rojo',file:'entrada-rojo.webp',cat:'decoracion',tag:'Decoración',retailPrice:35000},
+  {name:'Farol Pequeño Cuadrado',file:'farol-pequeno.webp',cat:'iluminacion',tag:'Iluminación',retailPrice:10000},
+  {name:'Farol Pequeño Redondo',file:'farol-pequenoR.jpg',cat:'iluminacion',tag:'Iluminación',retailPrice:10000},
+  {name:'Farol de Agua',file:'farol-agua.jpg',cat:'iluminacion',tag:'Iluminación',retailPrice:70000},
+  {name:'Entrada Rojo',file:'entrada-rojo.webp',cat:'decoracion',tag:'Decoración',retailPrice:35000,outOfStock:true},
   {name:'Flores',file:'flores.webp',cat:'decoracion',tag:'Decoración',retailPrice:5000},
   {name:'Flor Dorada',file:'flor-dorada.webp',cat:'decoracion',tag:'Decoración',retailPrice:5000},
   {name:'Flor Plata',file:'flor-plata.webp',cat:'decoracion',tag:'Decoración',retailPrice:5000},
@@ -30,8 +29,8 @@ const PRODUCTS = [
   // Ejemplo: {name:'Producto', ..., outOfStock:true}
 
   // Barrigones: 10% de descuento por mayor para proteger el margen.
-  {name:'Muñeco de Nieve Barrigón',file:'muneco-nieve-barrigon.webp',cat:'figuras',tag:'Figuras',retailPrice:200000,wholesalePrice:180000},
-  {name:'Papá Noel Barrigón',file:'papa-noel-barrigon.webp',cat:'figuras',tag:'Figuras',retailPrice:200000,wholesalePrice:180000},
+  {name:'Muñeco de Nieve Barrigón',file:'muneco-nieve-barrigon.webp',cat:'figuras',tag:'Figuras',retailPrice:220000,wholesalePrice:180000},
+  {name:'Papá Noel Barrigón',file:'papa-noel-barrigon.webp',cat:'figuras',tag:'Figuras',retailPrice:220000,wholesalePrice:180000},
 
   {name:'Muñeco de Nieve de Entrada',file:'muneco-nieve-entrada.webp',cat:'figuras',tag:'Figuras',retailPrice:30000},
   {name:'Muñeco Reno de Entrada',file:'muneco-reno-entrada.webp',cat:'figuras',tag:'Figuras',retailPrice:30000},
@@ -40,16 +39,11 @@ const PRODUCTS = [
   // Referencias de $30.000: precio especial por mayor de $28.000.
   {name:'Papá Noel de Entrada',file:'papa-noel-entrada.webp',cat:'figuras',tag:'Figuras',retailPrice:30000,wholesalePrice:28000},
 
-  {name:'Piernas Largas Galleta',file:'piernas-largas-galleta.webp',cat:'figuras',tag:'Figuras',retailPrice:60000},
-  {name:'Piernas Largas Rosadas',file:'piernas-largas-rosadas.webp',cat:'figuras',tag:'Figuras',retailPrice:70000},
+  {name:'Piernas Largas Galleta',file:'piernas-largas-galleta.webp',cat:'figuras',tag:'Figuras',retailPrice:60000,outOfStock:true},
+  {name:'Piernas Largas Rosadas',file:'piernas-largas-rosadas.webp',cat:'figuras',tag:'Figuras',retailPrice:70000,outOfStock:true},
   {name:'Piernas Largas',file:'piernas-largas.webp',cat:'figuras',tag:'Figuras',retailPrice:70000},
-  {name:'Forros para Cojín',file:'forros-cojin.webp',cat:'textil',tag:'Textil',retailPrice:8000,outOfStock:true},
-  {name:'Forros para Cojínes',file:'cojin1.webp',cat:'textil',tag:'Textil',retailPrice:8000,outOfStock:true},
-  {name:'Forros paraCojínes',file:'cojin2.webp',cat:'textil',tag:'Textil',retailPrice:8000,outOfStock:true},
-  {name:'Forros paraCojínes',file:'cojin3.webp',cat:'textil',tag:'Textil',retailPrice:8000,outOfStock:true},
-  {name:'Forros paraCojínes',file:'cojin4.webp',cat:'textil',tag:'Textil',retailPrice:8000,outOfStock:true},
-  {name:'Forros paraCojínes',file:'cojin5.webp',cat:'textil',tag:'Textil',retailPrice:8000,outOfStock:true},
-  {name:'Forros paraCojínes',file:'cojin6.webp',cat:'textil',tag:'Textil',retailPrice:8000,outOfStock:true},
-  {name:'Canecas Navideñas',file:'canecas-navidenas.webp',cat:'decoracion',tag:'Decoración',retailPrice:8000},
+  {name:'Canecas Navideñas Redondas',file:'canecas-navidenasR.jpg',cat:'decoracion',tag:'Decoración',retailPrice:8000},
+  {name:'Bandejas Navideñas',file:'bandejas.jpg',cat:'decoracion',tag:'Decoración',retailPrice:5000},
+  {name:'Platos Navideños',file:'platos.jpg',cat:'decoracion',tag:'Decoración',retailPrice:5000},
   {name:'Tapetes',file:'tapetes.webp',cat:'textil',tag:'Textil',retailPrice:8000}
 ];
