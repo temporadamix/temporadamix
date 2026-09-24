@@ -46,7 +46,7 @@ const PRODUCTS = [
   {name:'Canecas Navideñas Redondas',file:'canecas-navidenasR.webp',cat:'decoracion',tag:'Decoración',retailPrice:8000},
   {name:'Bandejas Navideñas',file:'bandejas.webp',cat:'decoracion',tag:'Decoración',retailPrice:5000},
   {name:'Platos Navideños',file:'platos.webp',cat:'decoracion',tag:'Decoración',retailPrice:5000},
-  {name:'Tapetes',file:'tapetes.webp',cat:'textil',tag:'Textil',retailPrice:8000}
+  {name:'Tapetes',file:'tapetes.webp',cat:'textil',tag:'Textil',retailPrice:8000},
   {name:'Funda para Silla x 4',file:'forros-4puestos.webp',cat:'textil',tag:'Textil',retailPrice:50000},
-  {name:'Funda para Silla x 6',file:'forros-6puestos.webp',cat:'textil',tag:'Textil',retailPrice:70000},
+  {name:'Funda para Silla x 6',file:'forros-6puestos.webp',cat:'textil',tag:'Textil',retailPrice:70000}
 ];
