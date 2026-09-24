@@ -40,7 +40,7 @@ const PRODUCTS = [
   {name:'Papá Noel de Entrada',file:'papa-noel-entrada.webp',cat:'figuras',tag:'Figuras',retailPrice:30000,wholesalePrice:28000},
 
   {name:'Piernas Largas Galleta',file:'piernas-largas-galleta.webp',cat:'figuras',tag:'Figuras',retailPrice:60000},
-  {name:'Piernas Largas Mediano',file:'muneco_galleta.webp',cat:'figuras',tag:'Figuras',retailPrice:90000},
+  {name:'Piernas Largas Mediano',file:'muneco_galleta.webp',cat:'figuras',tag:'Figuras',retailPrice:50000},
   {name:'Piernas Largas Rosadas',file:'piernas-largas-rosadas.webp',cat:'figuras',tag:'Figuras',retailPrice:70000,outOfStock:true},
   {name:'Piernas Largas',file:'piernas-largas.webp',cat:'figuras',tag:'Figuras',retailPrice:70000},
   {name:'Canecas Navideñas Redondas',file:'canecas-navidenasR.webp',cat:'decoracion',tag:'Decoración',retailPrice:8000},
