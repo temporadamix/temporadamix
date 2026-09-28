@@ -35,18 +35,22 @@ const PRODUCTS = [
   {name:'Muñeco de Nieve de Entrada',file:'muneco-nieve-entrada.webp',cat:'figuras',tag:'Figuras',retailPrice:30000},
   {name:'Muñeco Reno de Entrada',file:'muneco-reno-entrada.webp',cat:'figuras',tag:'Figuras',retailPrice:30000},
   {name:'Muñecos de Entrada',file:'munecos-entrada.webp',cat:'figuras',tag:'Figuras',retailPrice:90000},
+  {name:'Muñecos de Entrada Sencilla',file:'entrada-papa.webp',cat:'figuras',tag:'Figuras',retailPrice:20000},
 
-  // Referencias de $30.000: precio especial por mayor de $28.000.
+  // Referencias de $30.000: precio especial por mayor de $28.000. ,wholesalePrice:28000
   {name:'Papá Noel de Entrada',file:'papa-noel-entrada.webp',cat:'figuras',tag:'Figuras',retailPrice:30000,wholesalePrice:28000},
 
   {name:'Piernas Largas Galleta',file:'piernas-largas-galleta.webp',cat:'figuras',tag:'Figuras',retailPrice:60000},
   {name:'Piernas Largas Mediano',file:'muneco_galleta.webp',cat:'figuras',tag:'Figuras',retailPrice:50000},
   {name:'Piernas Largas Rosadas',file:'piernas-largas-rosadas.webp',cat:'figuras',tag:'Figuras',retailPrice:70000,outOfStock:true},
   {name:'Piernas Largas',file:'piernas-largas.webp',cat:'figuras',tag:'Figuras',retailPrice:70000},
+  {name:'Papa Noel decorativo',file:'papa-luz.webp',cat:'figuras',tag:'Figuras',retailPrice:20000},
   {name:'Canecas Navideñas Redondas',file:'canecas-navidenasR.webp',cat:'decoracion',tag:'Decoración',retailPrice:8000},
   {name:'Bandejas Navideñas',file:'bandejas.webp',cat:'decoracion',tag:'Decoración',retailPrice:5000},
   {name:'Platos Navideños',file:'platos.webp',cat:'decoracion',tag:'Decoración',retailPrice:5000},
+  {name:'Bandeja Navideña Rectangular',file:'bandeja.webp',cat:'decoracion',tag:'Decoración',retailPrice:5000},
+  {name:'Velas Navideñas',file:'velas.webp',cat:'figuras',tag:'Figuras',retailPrice:5000},
   {name:'Tapetes',file:'tapetes.webp',cat:'textil',tag:'Textil',retailPrice:8000},
   {name:'Funda para Silla x 4',file:'forros-4puestos.webp',cat:'textil',tag:'Textil',retailPrice:50000},
-  {name:'Funda para Silla x 6',file:'forros-6puestos.webp',cat:'textil',tag:'Textil',retailPrice:70000}
+  {name:'Funda para Silla x 6',file:'forros-6puestos.webp',cat:'textil',tag:'Textil',retailPrice:70000,outOfStock:true}
 ];
