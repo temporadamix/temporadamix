@@ -118,10 +118,59 @@ function card(p, index){
   </article>`;
 }
 
+// ===== VISOR AMPLIADO DE PRODUCTOS =====
+const imageViewer = document.getElementById('imageViewer');
+const imageViewerImg = document.getElementById('imageViewerImg');
+const imageViewerTitle = document.getElementById('imageViewerTitle');
+function openImageViewer(src, alt = '') {
+  if (!imageViewer || !imageViewerImg) return;
+  imageViewerImg.src = src;
+  imageViewerImg.alt = alt;
+  if (imageViewerTitle) {
+    imageViewerTitle.textContent = alt;
+  }
+  imageViewer.hidden = false;
+  imageViewer.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('modal-open');
+  setTimeout(() => {
+    document.querySelector('.image-viewer-close')?.focus();
+  }, 20);
+}
+
+function closeImageViewer() {
+  if (!imageViewer) return;
+    imageViewer.hidden = true;
+    imageViewer.setAttribute('aria-hidden', 'true');
+    imageViewerImg.src = '';
+    document.body.classList.remove('modal-open');
+}
+
+function attachImageViewerEvents() {
+  document.querySelectorAll('.product-image img').forEach(img => {
+    img.addEventListener('click', () => {
+      if (img.src) {
+        openImageViewer(img.src, img.alt);
+      }
+    });
+  });
+}
+// Cerrar al hacer clic en X o fuera de la imagen
+document.querySelectorAll('[data-close-image]').forEach(element => {
+  element.addEventListener('click', closeImageViewer);
+});
+// Cerrar con la tecla ESC
+document.addEventListener('keydown', event => {
+  if (
+    event.key === 'Escape' && imageViewer && !imageViewer.hidden
+  ) {
+    closeImageViewer();
+  }
+});
 function render(){
   const q = normalize(search.value.trim());
   const filtered = PRODUCTS.filter(p => (activeFilter==='todos' || p.cat===activeFilter) && (!q || normalize(p.name).includes(q) || normalize(p.tag).includes(q)));
   grid.innerHTML = filtered.map(p => card(p, PRODUCTS.indexOf(p))).join('');
+  attachImageViewerEvents();
   count.textContent = `${filtered.length} productos`;
   empty.hidden = filtered.length > 0;
   grid.querySelectorAll('.product-wa').forEach(link => link.addEventListener('click', e => {
