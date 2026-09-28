@@ -78,7 +78,18 @@
     <div class="copyright">© 2026 TemporadaMix · Todos los derechos reservados.</div>
   </footer>
 
-  <div id="whatsappModal" class="wa-modal" hidden aria-hidden="true">
+ <!-- Visor ampliado de productos -->
+  <div id="imageViewer" class="image-viewer" hidden aria-hidden="true">
+  <div class="image-viewer-backdrop" data-close-image></div>
+  <div class="image-viewer-dialog" role="dialog" aria-modal="true" aria-labelledby="imageViewerTitle">
+    <button class="image-viewer-close" type="button" data-close-image aria-label="Cerrar imagen">×</button>
+    <div class="image-viewer-content">
+      <img id="imageViewerImg" src="" alt="">
+    </div>
+    <p id="imageViewerTitle" class="image-viewer-caption"></p>
+  </div>
+</div>
+   <div id="whatsappModal" class="wa-modal" hidden aria-hidden="true">
     <div class="wa-backdrop" data-close-wa></div>
     <div class="wa-dialog" role="dialog" aria-modal="true" aria-labelledby="waTitle">
       <button class="wa-close" type="button" data-close-wa aria-label="Cerrar">×</button>
