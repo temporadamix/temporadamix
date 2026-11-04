@@ -55,8 +55,8 @@ const PRODUCTS = [
   {name:'Bandeja Navideña Rectangular',file:'bandeja.webp',cat:'decoracion',tag:'Decoración',retailPrice:5000},
   {name:'Velas Navideñas',file:'velas.webp',cat:'figuras',tag:'Figuras',retailPrice:5000},
   {name:'Tapetes',file:'tapetes.webp',cat:'textil',tag:'Textil',retailPrice:8000},
-  {name:'Decoración Arbol',file:'munecoarbol.webp',cat:'textil',tag:'Textil',retailPrice:15000},
-  {name:'Decoración Arbol',file:'estrellaarbol.webp',cat:'textil',tag:'Textil',retailPrice:20000},
+  {name:'Decoración Arbol',file:'munecoarbol.webp',cat:'textil',tag:'Decoración',retailPrice:15000},
+  {name:'Decoración Arbol',file:'estrellaarbol.webp',cat:'textil',tag:'Decoración',retailPrice:20000},
   {name:'Funda para Silla x 4',file:'forros-4puestos.webp',cat:'textil',tag:'Textil',retailPrice:50000},
   {name:'Funda para Silla x 6',file:'forros-6puestos.webp',cat:'textil',tag:'Textil',retailPrice:70000,outOfStock:true}
 ];
