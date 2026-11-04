@@ -18,6 +18,7 @@ const PRODUCTS = [
   {name:'Farol Grande',file:'farol-grande.webp',cat:'iluminacion',tag:'Iluminación',retailPrice:80000},
   {name:'Farol Pequeño Cuadrado',file:'farol-pequeno.webp',cat:'iluminacion',tag:'Iluminación',retailPrice:10000},
   {name:'Farol Pequeño Redondo',file:'farol-pequenoR.webp',cat:'iluminacion',tag:'Iluminación',retailPrice:10000},
+  {name:'Vela con Luz',file:'velaled.webp',cat:'iluminacion',tag:'Iluminación',retailPrice:10000},
   {name:'Farol de Agua',file:'farol-agua.webp',cat:'iluminacion',tag:'Iluminación',retailPrice:70000},
   {name:'Entrada Rojo',file:'entrada-rojo.webp',cat:'decoracion',tag:'Decoración',retailPrice:35000,outOfStock:true},
   {name:'Flores',file:'flores.webp',cat:'decoracion',tag:'Decoración',retailPrice:5000},
@@ -44,6 +45,9 @@ const PRODUCTS = [
   {name:'Piernas Largas Mediano',file:'muneco_galleta.webp',cat:'figuras',tag:'Figuras',retailPrice:50000},
   {name:'Piernas Largas Rosadas',file:'piernas-largas-rosadas.webp',cat:'figuras',tag:'Figuras',retailPrice:70000,outOfStock:true},
   {name:'Piernas Largas',file:'piernas-largas.webp',cat:'figuras',tag:'Figuras',retailPrice:70000},
+  {name:'Cojines',file:'cojinnavideno.webp',cat:'textil',tag:'Textil',retailPrice:50000},
+  {name:'Reloj Pared',file:'relojgrande.webp',cat:'figuras',tag:'Figuras',retailPrice:40000},
+  {name:'Reloj Pared Pequeño',file:'relojpequeno.webp',cat:'figuras',tag:'Figuras',retailPrice:30000},
   {name:'Papa Noel decorativo',file:'papa-luz.webp',cat:'figuras',tag:'Figuras',retailPrice:20000},
   {name:'Canecas Navideñas Redondas',file:'canecas-navidenasR.webp',cat:'decoracion',tag:'Decoración',retailPrice:8000},
   {name:'Bandejas Navideñas',file:'bandejas.webp',cat:'decoracion',tag:'Decoración',retailPrice:5000},
@@ -51,6 +55,8 @@ const PRODUCTS = [
   {name:'Bandeja Navideña Rectangular',file:'bandeja.webp',cat:'decoracion',tag:'Decoración',retailPrice:5000},
   {name:'Velas Navideñas',file:'velas.webp',cat:'figuras',tag:'Figuras',retailPrice:5000},
   {name:'Tapetes',file:'tapetes.webp',cat:'textil',tag:'Textil',retailPrice:8000},
+  {name:'Decoración Arbol',file:'munecoarbol.webp',cat:'textil',tag:'Textil',retailPrice:15000},
+  {name:'Decoración Arbol',file:'estrellaarbol.webp',cat:'textil',tag:'Textil',retailPrice:20000},
   {name:'Funda para Silla x 4',file:'forros-4puestos.webp',cat:'textil',tag:'Textil',retailPrice:50000},
   {name:'Funda para Silla x 6',file:'forros-6puestos.webp',cat:'textil',tag:'Textil',retailPrice:70000,outOfStock:true}
 ];
